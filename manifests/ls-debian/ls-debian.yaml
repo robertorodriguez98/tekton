@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: ls-debian
+spec:
+  workspaces:
+    - name: source
+  steps:
+    - name: ls
+      image: debian
+      script: |
+        ls -Rl workspace/source
+
