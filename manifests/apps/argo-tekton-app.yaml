@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-tekton-app
+  name: argo-tekton-app2
   namespace: argocd
 spec:
   destination:
-    namespace: argo-tekton-app
+    namespace: default
     server: https://kubernetes.default.svc
   project: default
   source:
